@@ -18,9 +18,11 @@ def get_biggest_bar(bars):
 def get_smallest_bar(bars):
     return min(bars, key=sorting_by_seats_criteria) 
 
+def get_dest_point(bar):
+    return bar['geometry']['coordinates']
+
 def get_closest_bar(bars, longitude, latitude):
     from_point = (longitude, latitude)
-    get_dest_point = lambda bar: bar['geometry']['coordinates']
     closest_bar = min (
 			    	bars, 
 			    	key=lambda bar: haversine.haversine(
@@ -51,10 +53,10 @@ def main():
     biggest_bar = get_biggest_bar(bars_list)
     print_bar_info(smallest_bar, 'Smallest bar:')
     print_bar_info(biggest_bar, 'Biggest bar:')
-    user_gps = (float(num) for num in 
+    user_gps = (float(coord) for coord in 
                     input('Please input yr gps coordinates: ').split())
-    closest = get_closest_bar(bars_list, *user_gps)
-    print_bar_info(closest, 'The closest bar for you is: ')
+    closest_bar = get_closest_bar(bars_list, *user_gps)
+    print_bar_info(closest_bar, 'The closest bar for you is: ')
 
 if __name__ == '__main__':
     main()

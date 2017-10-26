@@ -1,13 +1,13 @@
-# Ближайшие бары 
+# Closest bar
 Prints bars with maximum and minimum quantity of seats, 
-displays information about the bar that is closes to given
+displays information about the bar that is the closest to given
 gps coordinates.
 
-# Как запустить
+# How to utilize
 
-Скрипт требует для своей работы установленного интерпретатора Python версии 3.5
+Script requires Python3.5
 
-Запуск на Linux:
+Launching on Linux
 
 ```bash
 
@@ -33,8 +33,8 @@ PublicPhone : [{'PublicPhone': '(495) 676-85-55'}]
 SeatsCount : 30
 ```
 
-Запуск на Windows происходит аналогично.
+Launching on Windows is the same
 
-# Цели проекта
+# Purposes of project
 
-Код создан в учебных целях. В рамках учебного курса по веб-разработке - [DEVMAN.org](https://devman.org)
+Code is created for learning purposes. Within the framework of web development learning course [DEVMAN.org](https://devman.org)
