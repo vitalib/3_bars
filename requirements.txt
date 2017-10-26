@@ -1,2 +1,1 @@
 haversine==0.4.5
-pkg-resources==0.0.0
